@@ -9,6 +9,7 @@
 " =================== Settings =============================
 
 set nocompatible
+se t_Co=256     " Make Terminal support 256 colours
 
 filetype plugin indent on	" Load plugins according to detected filetype.
 syntax on		" Enable syntax highlighting.
@@ -32,7 +33,7 @@ set hidden              " Switch between buffers without having to save first.
 set laststatus=2        " Always show statusline.
 set display=lastline    " Show as much as possible of the last line.
 
-set showmode            " Show current mode in command-line.
+"set showmode            " Show current mode in command-line.
 set showcmd             " Show already typed keys when more are expected.
 
 set incsearch           " Highlight whle searching with / or ?
@@ -119,3 +120,38 @@ inoremap <leader>q <esc>:wq <cr>
 inoremap <leader>o <esc>o
 
 
+
+
+" ================ Plugin ==================================
+" Manage plugins with vim-plug
+
+call plug#begin('~/.vim/plugged')
+" Color scheme
+Plug 'morhetz/gruvbox'
+" Status line
+Plug 'vim-airline/vim-airline'
+" Commented. Enough with 'gruvbox'
+" Plug 'vim-airline/vim-airline-themes'
+Plug 'Yggdroot/indentLine'
+call plug#end()
+
+
+
+
+" ================ Style ==================================
+
+" {{ Gruvbox }}
+" Specify colorscheme "gruvbox"
+"colorscheme gruvbox
+" Use dark mode
+"set background=dark
+
+" {{ Airline }}
+" Enable font patch in airline
+let g:airline_powerline_fonts = 1
+
+" {{ IndentLine }}
+" Customize the line color
+let g:indentLine_color_term = 239
+" Customize the line style
+let g:indentLine_char = '|'
