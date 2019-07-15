@@ -10,11 +10,12 @@ Here is
 
     - basic vim setting
 - vim plugins for Python
-      - [gruvbox](https://github.com/morhetz/gruvbox) -- color scheme
-      - [vim-airline](https://github.com/vim-airline/vim-airline) -- vim status line enhance
-      - [indentLine](https://github.com/Yggdroot/indentLine) -- display thin vertical lines at each indentation level
+  
+  - [gruvbox](https://github.com/morhetz/gruvbox) -- color scheme
+  - [vim-airline](https://github.com/vim-airline/vim-airline) -- vim status line enhance
+  - [indentLine](https://github.com/Yggdroot/indentLine) -- display thin vertical lines at each indentation level
     - colorscheme:  "grubbox"
-    
+  
 - tmux config
 
     > reference: [Tmux使用手册](http://louiszhai.github.io/2017/09/30/tmux/)
