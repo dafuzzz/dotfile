@@ -96,8 +96,6 @@ let mapleader=","
 nnoremap <leader>ev :vsplit $MYVIMRC <cr>
 " Reload $MYVIMRC
 nnoremap <leader>sv :source $MYVIMRC <cr>
-" `<space>` to select the word where the curosr is in visual mode
-nnoremap <space> viw     
 " `<leader>d` to delete the crrent line
 nnoremap <leader>d dd
 " Change current window
@@ -126,13 +124,23 @@ inoremap <leader>o <esc>o
 " Manage plugins with vim-plug
 
 call plug#begin('~/.vim/plugged')
+
 " Color scheme
 Plug 'morhetz/gruvbox'
+
 " Status line
 Plug 'vim-airline/vim-airline'
+
+" Status line theme
 " Commented. Enough with 'gruvbox'
 " Plug 'vim-airline/vim-airline-themes'
+
+" Python indent line indicator
 Plug 'Yggdroot/indentLine'
+
+" Python auto-completion
+Plug 'davidhalter/jedi-vim'
+
 call plug#end()
 
 
@@ -142,9 +150,9 @@ call plug#end()
 
 " {{ Gruvbox }}
 " Specify colorscheme "gruvbox"
-"colorscheme gruvbox
+colorscheme gruvbox
 " Use dark mode
-"set background=dark
+set background=dark
 
 " {{ Airline }}
 " Enable font patch in airline

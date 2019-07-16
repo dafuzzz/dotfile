@@ -15,6 +15,7 @@ Here is
   - [vim-airline](https://github.com/vim-airline/vim-airline) -- vim status line enhance
   - [indentLine](https://github.com/Yggdroot/indentLine) -- display thin vertical lines at each indentation level
     - colorscheme:  "grubbox"
+  - [jedi-vim](https://github.com/davidhalter/jedi-vim)  - Python auto-completion
   
 - tmux config
 
