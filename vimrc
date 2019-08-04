@@ -157,22 +157,21 @@ set background=dark
 
 " {{ Airline }}
 " Enable font patch in airline
-let g:airline_powerline_fonts = 1
+let g:airline_powerline_fonts=1
 
 " {{ IndentLine }}
 " Customize the line color
-let g:indentLine_color_term = 239
+let g:indentLine_color_term=239
 " Customize the line style
-let g:indentLine_char = '|'
+let g:indentLine_char='|'
 
 " {{ ale }}
 " linter
-let g:ale_linters = {
+let g:ale_linters={
 \   'python': ['pylint'],
 \}
 " formatter/fixer
-let g:ale_fixers = {
+let g:ale_fixers={
 \   'python': ['autopep8'],
 \}
-
 
