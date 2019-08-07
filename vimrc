@@ -2,14 +2,17 @@
 " A (not so) minimal vimrc
 "
 
-" Set 'nocompatible' anyway to make sure you get vim, not vi
-" We set it explicitly to make our position clear.
-
-
-" =================== Settings =============================
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Vim Core
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 set nocompatible
 se t_Co=256     " Make Terminal support 256 colours
+
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+"" Basic Setup
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 filetype plugin indent on	" Load plugins according to detected filetype.
 syntax on		" Enable syntax highlighting.
@@ -22,7 +25,7 @@ set autoindent		" Indent according to previous line.
 set expandtab		" Use spaces instead of tabs
 set shiftwidth=4	" >> indents by 4 spaces.
 set shiftround      " >> indents to next multiple of 'shiftwidth'
-set tabstop=4       " Bumber of spaces that a <Tab> in the file counts for.
+set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
 set softtabstop=4   " Number of spaces that a <Tab> counts for while
                     " performing editing operations, like inserting a <Tab> or
                     " using <BS>
@@ -77,11 +80,13 @@ set wrap            " Wrap the line when it's longer than the width of the
 set linebreak       " Wrap long lines at a character in 'breakat' 
                     " rather than at the last character that 
                     " fits on the screen
-au Filetype c,cpp,python set textwidth=80    
+"au Filetype c,cpp,python set textwidth=80    
+set textwidth=80
                    " Maximum width of text that is being inserting.
                     " A longer line will be broken after white space to 
                     " this width.
-au Filetype c,cpp,python set colorcolumn=81  
+"au Filetype c,cpp,python set colorcolumn=81  
+set colorcolumn=81
                     " A comma separated list of screen columns that are
                     " highlighted with ColorColumn.
 
@@ -157,21 +162,30 @@ set background=dark
 
 " {{ Airline }}
 " Enable font patch in airline
-let g:airline_powerline_fonts=1
+let g:airline_powerline_fonts = 1
 
 " {{ IndentLine }}
 " Customize the line color
-let g:indentLine_color_term=239
+let g:indentLine_color_term = 239
 " Customize the line style
-let g:indentLine_char='|'
+let g:indentLine_char = '|'
 
 " {{ ale }}
 " linter
-let g:ale_linters={
+let g:ale_linters = {
 \   'python': ['pylint'],
 \}
 " formatter/fixer
-let g:ale_fixers={
+let g:ale_fixers = {
 \   'python': ['autopep8'],
 \}
-
+" show errors/warnings in statusline
+let g:airline#extensions#ale#enabled = 1
+" stop linters to run on opening a file
+let g:ale_lint_on_enter = 0
+" use quickfix instead of quickfix
+let g:ale_set_loclist = 0
+let g:ale_set_quickfix = 1
+" show Vim windows for the loclist or quickfix items 
+" when a file contains warnings or errors
+let g:ale_open_list = 1
