@@ -173,7 +173,7 @@ let g:indentLine_char = '|'
 " {{ ale }}
 " linter
 let g:ale_linters = {
-\   'python': ['pylint'],
+\   'python': ['pylint', 'pyls'],
 \}
 " formatter/fixer
 let g:ale_fixers = {
@@ -181,11 +181,9 @@ let g:ale_fixers = {
 \}
 " show errors/warnings in statusline
 let g:airline#extensions#ale#enabled = 1
-" stop linters to run on opening a file
+" stop linters to run on opening a file and leaving insert mode
+let g:ale_lint_on_insert_leave = 0
 let g:ale_lint_on_enter = 0
-" use quickfix instead of quickfix
-let g:ale_set_loclist = 0
-let g:ale_set_quickfix = 1
 " show Vim windows for the loclist or quickfix items 
 " when a file contains warnings or errors
 let g:ale_open_list = 1
