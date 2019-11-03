@@ -147,7 +147,7 @@ Plug 'Yggdroot/indentLine'
 Plug 'davidhalter/jedi-vim'
 
 " Python linter
-Plug 'w0rp/ale'
+Plug 'dense-analysis/ale'
 
 call plug#end()
 
