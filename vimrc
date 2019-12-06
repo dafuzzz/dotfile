@@ -90,6 +90,8 @@ set colorcolumn=81
                     " A comma separated list of screen columns that are
                     " highlighted with ColorColumn.
 
+set pastetoggle=<F3>    " <F3> to start/stop paste mode to avoid
+                        " unexpected indent when pasting from clipboard
 
 
 " ================ Mapping ==================================
