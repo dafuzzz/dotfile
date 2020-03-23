@@ -21,14 +21,16 @@ set encoding=utf-8
 set fileencodings=utf-8,cp936,gb18030,big5,euc-jp,euc-kr,latin1
 set termencoding=utf-8
 
-set autoindent		" Indent according to previous line.
-set expandtab		" Use spaces instead of tabs
-set shiftwidth=4	" >> indents by 4 spaces.
-set shiftround      " >> indents to next multiple of 'shiftwidth'
+set autoindent	    " Indent in new line same with previous line.
 set tabstop=4       " Number of spaces that a <Tab> in the file counts for.
-set softtabstop=4   " Number of spaces that a <Tab> counts for while
-                    " performing editing operations, like inserting a <Tab> or
-                    " using <BS>
+"set softtabstop=0   " Number of spaces that a <tab> counts for while performing
+                    " editing, like inserting a <Tab> for using <BS>.
+                    " Zero to turn it off.
+set expandtab       " Use appropriate number of spaces to insert a <Tab>
+set shiftwidth=4    " Number fo spaces to use for each step of (auto)indent.
+"set smarttab        " A <Tab> inserts blanks according to 'shiftwidth'.
+set shiftround      " Round indent to multiple of 'shiftwidth'
+
 
                 
 set backspace=indent,eol,start  " Make backspace work as you wole expect.
@@ -93,7 +95,6 @@ set colorcolumn=81
 set pastetoggle=<F3>    " <F3> to start/stop paste mode to avoid
                         " unexpected indent when pasting from clipboard
 
-
 " ================ Mapping ==================================
 let mapleader=","
 
@@ -123,7 +124,8 @@ inoremap <leader>w <esc>:w <cr>
 inoremap <leader>q <esc>:wq <cr>
 " <leader>o to add a line below
 inoremap <leader>o <esc>o
-
+" <leader>a to jump to end of line
+inoremap <leader>a <esc>A
 
 
 
