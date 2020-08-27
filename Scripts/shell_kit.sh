@@ -2,8 +2,9 @@
 
 alias v="vim"
 alias ll="ls -l"
-alias setproxy="export ALL_PROXY=socks5://127.0.0.1:1080" 
-alias unsetproxy="unset ALL_PROXY"
+alias setproxy=doSetProxy
+alias unsetproxy=doUnsetProxy
+alias postman='/home/dafu/Applications/Postman/Postman &'
 alias shdn="sudo shutdown -h now"
 
 
@@ -26,3 +27,16 @@ alias dirm='docker image rm'
 # Git, refresh every 2 seconds
 alias wgloga='watch --color -n 2 git log --oneline --graph --decorate --color=always --all'
 alias wglog='watch --color  -n 2 git log --oneline --graph --decorate --color=always'
+
+
+doSetProxy(){
+    export all_proxy=127.0.0.1:1080
+    export http_proxy=127.0.0.1:1080
+    export https_proxy=127.0.0.1:1080
+}
+
+doUnsetProxy(){
+    unset all_proxy
+    unset http_proxy
+    unset https_proxy
+}
