@@ -1,7 +1,7 @@
 #!/bin/zsh
 
 alias v="vim"
-alias ll="ls -l"
+alias ll="ls -lh"
 alias setproxy=doSetProxy
 alias unsetproxy=doUnsetProxy
 alias postman='/home/dafu/Applications/Postman/Postman &'
