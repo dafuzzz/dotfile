@@ -22,7 +22,14 @@ Here is
     > reference: [Tmux使用手册](http://louiszhai.github.io/2017/09/30/tmux/)
 
     - common tmux setting
-    - color scheme: [Tmux使用手册](https://github.com/jimeh/tmux-themepack#tmux-themepack)
+    - color scheme: [tmux-themepack](https://github.com/jimeh/tmux-themepack#tmux-themepack)
+
+
+
+# Installation Manual
+
+- 终端主题: 执行`terminal/install_custom_terminal_theme.sh`
+- zsh主题: 执行`zsh/install_zeta_zsh_theme.sh`
 
 
 

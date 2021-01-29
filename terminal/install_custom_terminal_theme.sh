@@ -2,6 +2,8 @@
 
 echo "====== Start installing custom terminal_theme"
 
+PROJECT_URL="https://git.dafu2020.xyz:7068/dafu/Gogh.git"
+
 # Pre-Install
 echo "====== Pre-Install packages"
 sudo apt-get install -y dconf-cli uuid-runtime
@@ -14,7 +16,7 @@ then
     git pull
 else
     echo "====== Clone gogh repo"
-    git clone ssh://git@git.dafu2020.xyz:10103/dafu/Gogh.git gogh
+    git clone $PROJECT_URL gogh
     cd gogh/themes
 fi
 
