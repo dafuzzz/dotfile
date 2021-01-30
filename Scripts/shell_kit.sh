@@ -1,11 +1,17 @@
 #!/bin/zsh
 
-alias v="vim"
+# Command
 alias ll="ls -lh"
 alias setproxy=doSetProxy
-alias unsetproxy=doUnsetProxy
-alias postman='/home/dafu/Applications/Postman/Postman &'
 alias shdn="sudo shutdown -h now"
+alias unsetproxy=doUnsetProxy
+alias v="vim"
+
+
+# Application
+alias postman="/home/dafu/Applications/Postman/Postman &"
+alias ob="/home/dafu/Applications/Obsidian-0.10.11.AppImage &"
+alias tg="/home/dafu/Applications/Telegram/Telegram &"
 
 
 # Docker
